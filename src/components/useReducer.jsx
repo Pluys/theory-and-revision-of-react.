@@ -13,7 +13,7 @@ function reducer(state, action) {
         ...state,
         boolean: !state.boolean,
       };
-    case "CHANGE_NUMBER":
+    case "INCREMENT_NUMBER":
       return {
         ...state,
         number: state.number + 1,
@@ -29,15 +29,15 @@ export default function UseReducer() {
   const [state, dispatch] = useReducer(reducer, { number: 0, boolean: false });
   //El usereducer tambien es asincrono.
   return (
-    <div>
+    <div className="p-2">
       Soy el componente con varios estados, y usa useReducer
       <br />
       Si tocas alguno de esos, cambian
       <br />
       <p
         //asi se llama a la funcion reductora. notar que el type esta en un objeto
-        onClick={() => dispatch({ type: "CHANGE_NUMBER" })}
-        className="bg-gray-700 w-fit"
+        onClick={() => dispatch({ type: "INCREMENT_NUMBER" })}
+        className="bg-gray-700 w-fit hover:cursor-pointer border-2 mt-1 p-2"
       >
         Este es el estado 1: {state.number}
       </p>
@@ -46,12 +46,12 @@ export default function UseReducer() {
         onClick={() => {
           dispatch({ type: "CHANGE_BOOL" });
         }}
-        className="bg-gray-700 w-fit"
+        className="bg-gray-700 w-fit hover:cursor-pointer border-2 mb-1 p-2"
       >
         Este es el estado 2: {state.boolean.toString()}
       </p>
       El use reducer permite controlar multiples estados, y se pueden controlar
-      libremente por el reducer.
+      libremente por el dispatch.
     </div>
   );
 }

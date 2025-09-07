@@ -5,7 +5,7 @@ export default function Abuelo() {
   const [numero, setNumero] = useState(0);
 
   return (
-    <div className="border-2 border-green-300 bg-gray-500 mt-12">
+    <div className="border-2 border-green-300 bg-gray-500 mt-12 p-3">
       Hola, soy el componente Abuelo, y uso el concepto de prop drilling
       <br />
       Tambien tengo el estado, osea, el numero y la manera de cambiarlo.

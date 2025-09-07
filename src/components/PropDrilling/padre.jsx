@@ -2,13 +2,13 @@ import Hijo from "./hijo";
 
 export default function Padre({ cambiarNumero, numeroEnCuestion }) {
   return (
-    <div className="border-2 border-green-600 bg-gray-700">
+    <div className="border-2 border-green-600 bg-gray-700 p-3 m-2">
       hola, soy el Padre, y yo tengo la habilidad de cambiar el numero
       <br />
       {/* Esto seria el setNumero. de el abuelo.*/}
       <button
         onClick={() => cambiarNumero(numeroEnCuestion + 1)}
-        className="border-2 bg-amber-900"
+        className="border-2 bg-amber-900 mb-1"
       >
         Aumentar numero desde el papa
       </button>

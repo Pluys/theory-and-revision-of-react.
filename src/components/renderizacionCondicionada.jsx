@@ -6,15 +6,15 @@ export default function RenderizacionCondicionada() {
     <div>
       <button
         onClick={() => setMostrar(!mostrar)}
-        className="border-2 border-amber-200 bg-amber-500"
+        className="border-2 border-amber-200 bg-yellow-600 mb-4 p-2"
       >
-        Soy un button
+        Soy un button, y controlo el renderizado que {!mostrar && "no"} vez
       </button>
       {/* Basicamente usas un ternario o condicional para condicionar la
       renderizacion de un componente. */}
       {mostrar && (
-        <div className="bg-gray-700">
-          Soy un componente con renderizado condicional
+        <div className="bg-gray-700 p-1 border-4">
+          Y yo soy el componente con renderizado condicional
         </div>
       )}
     </div>
