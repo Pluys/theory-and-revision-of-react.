@@ -7,8 +7,10 @@ export default function Context() {
 
   return (
     <div className="border-2 mt-5 mb-5 bg-gray-800 p-2">
-      Yo soy el consumidor del contexto, y el valor boolean que me dieron es:
-      {boolean.toString()}
+      Yo soy el consumidor del contexto, y el valor boolean que me dieron es:{" "}
+      <p className={`${boolean ? "text-green-600" : "text-rose-500"}`}>
+        {boolean.toString()}
+      </p>
       <br />
       <button
         onClick={handleBoolean}

@@ -29,30 +29,32 @@ export default function UseReducer() {
   const [state, dispatch] = useReducer(reducer, { number: 0, boolean: false });
   //El usereducer tambien es asincrono.
   return (
-    <div className="p-2">
-      Soy el componente con varios estados, y usa useReducer
-      <br />
-      Si tocas alguno de esos, cambian
-      <br />
-      <button
-        //asi se llama a la funcion reductora. notar que el type esta en un objeto
-        onClick={() => dispatch({ type: "INCREMENT_NUMBER" })}
-        className="bg-gray-700 w-fit hover:cursor-pointer border-2 mt-1 p-2"
-      >
-        Este es el estado 1: {state.number}
-      </button>
-      <br />
-      <button
-        onClick={() => {
-          dispatch({ type: "CHANGE_BOOL" });
-        }}
-        className="bg-gray-700 w-fit hover:cursor-pointer border-2 mt-2 *:mb-1 p-2"
-      >
-        Este es el estado 2: {state.boolean.toString()}
-      </button>
-      <br />
-      El use reducer permite controlar multiples estados, y se pueden controlar
-      libremente por el dispatch.
+    <div className="flex row flex-wrap bg-gray-900 pb-1.5 pt-1.5 mt-5 border-2">
+      <div className="p-2">
+        Soy el componente con varios estados, y usa useReducer
+        <br />
+        Si tocas alguno de esos, cambian
+        <br />
+        <button
+          //asi se llama a la funcion reductora. notar que el type esta en un objeto
+          onClick={() => dispatch({ type: "INCREMENT_NUMBER" })}
+          className="bg-gray-700 w-fit hover:cursor-pointer border-2 mt-1 p-2"
+        >
+          Este es el estado 1: {state.number}
+        </button>
+        <br />
+        <button
+          onClick={() => {
+            dispatch({ type: "CHANGE_BOOL" });
+          }}
+          className="bg-gray-700 w-fit hover:cursor-pointer border-2 mt-2 *:mb-1 p-2"
+        >
+          Este es el estado 2: {state.boolean.toString()}
+        </button>
+        <br />
+        El use reducer permite controlar multiples estados, y se pueden
+        controlar libremente por el dispatch.
+      </div>
     </div>
   );
 }

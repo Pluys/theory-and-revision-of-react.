@@ -6,8 +6,10 @@ export default function ComponentePadreComun() {
   const [mostrar, setMostrar] = useState(0);
   return (
     <div className="border-4 bg-gray-600 p-2 mt-5">
-      Soy el padre de los hijos que muestran informacion, y aplico elevacion del
-      estado (Contengo el estado que usan mis hijos, similar al prop drilling)
+      Soy el padre de los hijos que muestran informacion, solo permito que uno
+      muestre informacion a la vez, y aplico elevacion del estado para eso
+      (Contengo el estado que usan mis hijos, similar al prop drilling)
+      <br />
       {/* Es mejor hacer un .map para esos dos, pero creo que queda mas visual así */}
       <HijoDelComponente
         mostrar={mostrar === 1} //le haces una consulta para que devuelva una expresion booleana, que es la que necesita el componente hijo.

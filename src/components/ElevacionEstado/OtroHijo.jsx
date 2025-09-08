@@ -6,7 +6,7 @@ export default function OtroHijo({ onChange, mostrar }) {
         <br />
         <button
           onClick={onChange}
-          className="border border-amber-200 bg-red-400 m-1"
+          className="border border-amber-200 bg-red-400 m-1 p-1"
         >
           Mostrar contenido
         </button>

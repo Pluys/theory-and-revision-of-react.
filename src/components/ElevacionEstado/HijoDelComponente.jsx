@@ -6,7 +6,7 @@ export default function HijoDelComponente({ onChange, mostrar }) {
         <br />
         <button
           onClick={onChange}
-          className="border border-amber-200 bg-amber-900 m-1"
+          className="border border-amber-200 bg-amber-900 m-1 p-1"
         >
           Mostrar contenido
         </button>

@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function RenderizacionCondicionada() {
   const [mostrar, setMostrar] = useState(true);
   return (
-    <div>
+    <div className="flex row flex-wrap bg-gray-900 pb-1.5 pt-1.5 mt-5 p-2 w-128 border-2 h-32">
       <button
         onClick={() => setMostrar(!mostrar)}
-        className="border-2 border-amber-200 bg-yellow-600 mb-4 p-2"
+        className="border-2 border-amber-200 bg-yellow-600 mb-4 p-2 h-fit hover:cursor-pointer"
       >
         Soy un button, y controlo el renderizado que {!mostrar && "no"} vez
       </button>
