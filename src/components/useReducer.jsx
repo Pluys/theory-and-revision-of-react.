@@ -34,22 +34,23 @@ export default function UseReducer() {
       <br />
       Si tocas alguno de esos, cambian
       <br />
-      <p
+      <button
         //asi se llama a la funcion reductora. notar que el type esta en un objeto
         onClick={() => dispatch({ type: "INCREMENT_NUMBER" })}
         className="bg-gray-700 w-fit hover:cursor-pointer border-2 mt-1 p-2"
       >
         Este es el estado 1: {state.number}
-      </p>
+      </button>
       <br />
-      <p
+      <button
         onClick={() => {
           dispatch({ type: "CHANGE_BOOL" });
         }}
-        className="bg-gray-700 w-fit hover:cursor-pointer border-2 mb-1 p-2"
+        className="bg-gray-700 w-fit hover:cursor-pointer border-2 mt-2 *:mb-1 p-2"
       >
         Este es el estado 2: {state.boolean.toString()}
-      </p>
+      </button>
+      <br />
       El use reducer permite controlar multiples estados, y se pueden controlar
       libremente por el dispatch.
     </div>

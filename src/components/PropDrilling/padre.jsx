@@ -8,7 +8,7 @@ export default function Padre({ cambiarNumero, numeroEnCuestion }) {
       {/* Esto seria el setNumero. de el abuelo.*/}
       <button
         onClick={() => cambiarNumero(numeroEnCuestion + 1)}
-        className="border-2 bg-amber-900 mb-1"
+        className="border-2 bg-amber-900 mb-1 p-0.5 hover:cursor-pointer"
       >
         Aumentar numero desde el papa
       </button>

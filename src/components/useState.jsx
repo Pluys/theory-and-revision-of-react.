@@ -11,7 +11,10 @@ export default function UseState() {
     <div
       //Se usa callback ya que setEstado requiere de parametros, y
       //De no tener el cb generaria un bucle infinito.
-      onClick={() => setEstado(estado + 1)}
+      onClick={() => {
+        setEstado(estado + 1);
+        console.log(estado);
+      }}
       className="bg-gray-700 w-fit p-5 rounded-2xl m-0.5"
     >
       ola, esto es un useState

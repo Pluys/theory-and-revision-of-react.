@@ -5,7 +5,7 @@ import OtroHijo from "./OtroHijo";
 export default function ComponentePadreComun() {
   const [mostrar, setMostrar] = useState(0);
   return (
-    <div className="border-4 bg-gray-600 p-2 mt-2">
+    <div className="border-4 bg-gray-600 p-2 mt-5">
       Soy el padre de los hijos que muestran informacion, y aplico elevacion del
       estado (Contengo el estado que usan mis hijos, similar al prop drilling)
       {/* Es mejor hacer un .map para esos dos, pero creo que queda mas visual así */}
