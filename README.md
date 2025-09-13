@@ -1,4 +1,4 @@
-# React
+# ![React logo](./public/react.svg) React
 
 El siguiente proyecto es un esfuerzo propio de un estudiante en representar de la manera más entendible y conceptualmete correctos los conceptos listados, o al menos en su posibilidad.
 
@@ -23,6 +23,32 @@ El siguiente proyecto es un esfuerzo propio de un estudiante en representar de l
 - TailwindCSS
 - Wouter
 - Zustand
-- [W.I.P.] Zod
-- [W.I.P.] React-Hook-Form
+- Zod
+- React-Hook-Form
 - [W.I.P.] Axios
+
+# ✏️ Documentación oficial
+
+## React
+
+`https://react.dev/reference/react`
+
+## TailwindCSS
+
+`https://tailwindcss.com/docs/installation/using-vite`
+
+## Wouter
+
+`https://github.com/molefrog/wouter`
+
+## Zustand
+
+`https://zustand.docs.pmnd.rs/getting-started/introduction`
+
+## Zod
+
+`https://zod.dev/`
+
+## React-Hook-Form
+
+`https://react-hook-form.com/get-started`
