@@ -1,12 +1,14 @@
 import { useContext, useEffect } from "react";
-import { useZustand } from "../store/useZustand";
 import MiContexto from "../context/miContexto/miContexto";
+import { useZustand } from "../store/useZustand";
 
 export default function UseEffect() {
   const { numerito } = useZustand();
+
+  //El boolean es únicamente para el ejemplo opcional, se puede comentar en cualquier otro caso.
   const { boolean } = useContext(MiContexto);
 
-  //Solo se llama a la primer renderizacion del componente.
+  //Solo se llama la primera vez que se monta el componente.
   useEffect(
     () => console.log("Hola dev, bienvenido a la pagina de persistencia:3"),
     []
@@ -18,7 +20,7 @@ export default function UseEffect() {
     console.log("El contador de zustand es de:", numerito);
   }, [numerito]);
 
-  //Ejemplo opcional:
+  //Ejemplo opcional, que utiliza context y zustand:
   /*
   useEffect(() => {
     console.log("Alguna de ambas persistencias cambió!");

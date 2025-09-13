@@ -2,7 +2,7 @@
 
 El siguiente proyecto es un esfuerzo propio de un estudiante en representar de la manera más entendible y conceptualmete correctos los conceptos listados, o al menos en su posibilidad.
 
-> Cabe recalcar que no soy la mejor fuente para estudiar los conceptos, ya que ese puesto es para las respectivas documentaciones.
+> Cabe recalcar que no soy la mejor fuente para estudiar los conceptos, ya que ese puesto es para las respectivas documentaciones oficiales.
 
 ## 🪝 Hooks
 

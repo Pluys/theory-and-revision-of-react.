@@ -1,11 +1,11 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-//Creamos una fucion  handler, que recibe set (Set tiene como parametro el objeto que estamos creando,
-// definido como "state")
+//Creamos una fucion  handler, que recibe set. Set tiene como parametro el objeto que estamos creando,
+//definido como "state", y lo que devuelva la función va a ser un cambio a el objeto original.
 
 //Y la funcion devuelve un objeto.
-//El objeto es el "contexto".
+//El objeto es el "contexto", o parte del mismo.
 const handler = (set) => ({
   numerito: 0,
 
@@ -21,13 +21,13 @@ const handler = (set) => ({
 //entiende que solo queres modificar esa propiedad, y reconstruye el resto del objeto por vos.
 
 //la funcion "create" recibe ese "contexto", y hace toda la magia por detrás.
-//la funcion "persist", hace que persista entre recargas de página la información.
+//la funcion "persist", hace que persista entre recargas de página la información, a traves del localStorage.
 //si se le desea, se puede poner una key específica, con un objeto con una propied "name".
 export const useZustand = create(persist(handler, { name: "miZustanzito" }));
 
 //recomiendo revisar el local storage de la pagina.
-//Notese como zustand no necesita envolver a los componentes a los que les otorga su "contexto"
-//Simplemente se llama a la funcion.
+//Notese como zustand no necesita envolver a los componentes a los que les otorga su "contexto",
+//simplemente se llama a la funcion, y se destructuriza lo requerido.
 
 /*
 PD:

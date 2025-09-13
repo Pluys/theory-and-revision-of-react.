@@ -2,7 +2,7 @@ import { useContext } from "react";
 import MiContexto from "../context/miContexto/miContexto";
 
 export default function Context() {
-  // Se destructuriza el contexto deseado, en este caso siendo ambos valores del contexto.
+  // Se destructuriza el contexto deseado del "value", en este caso siendo ambos valores del contexto.
   const { boolean, handleBoolean } = useContext(MiContexto);
 
   return (
@@ -14,7 +14,7 @@ export default function Context() {
       <br />
       <button
         onClick={handleBoolean}
-        className="border border-blue-500 p-2 bg-blue-800 m-2"
+        className="border border-blue-500 p-2 bg-blue-800 m-2 hover:cursor-pointer"
       >
         Y Tambien lo puedo cambiar gracias al contexto si apretas acá
       </button>

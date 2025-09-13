@@ -15,9 +15,10 @@ export default function Components() {
           Renderizacion condicional
         </h1>
         <RenderizacionCondicionada />
+
         <componenteNoRenderizado />
-        {/* Este no se renderiza pq los componentes tienen que tener su nombre en pascal
-      case. "UnComponente" != "unComponente". Mas info en la consola. */}
+        {/* Este componente no se renderiza porque los componentes tienen que tener su nombre en pascal
+      case. "UnComponente" != "unComponente". Mas info en la consola al intentar renderizarlo. */}
 
         <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
           Componentes dinamicos
@@ -26,10 +27,11 @@ export default function Components() {
           <UseState />
           <NotUseState />
           <p className="text-red-600">
-            Basicamente, el usestate permite hacer cambios dinamicos a la pagina
-            web.
+            Basicamente, los estados permiten hacer cambios dinamicos a la
+            pagina web.
           </p>
         </div>
+
         <UseReducer />
       </main>
     </>

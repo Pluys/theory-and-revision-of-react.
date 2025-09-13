@@ -1,21 +1,21 @@
 import { useState } from "react";
 
 export default function UseState() {
-  //El useState devuelve un array, con dos cosas;
+  //El useState devuelve un array, con dos posiciones;
   //El estado, y la funcion para cambiar el estado
   //Y como es molesto que esten en un array, usualmente se destructuriza
-  const [estado, setEstado] = useState(0);
+  const [estado, setEstado] = useState(0); // El useState recibe el tipo de dato del estado.
   //El useState es asincrono; El codigo no espera a que
   // el usestate se termine de ejecutar.
   return (
-    <div
+    <button
       //Se usa callback ya que setEstado requiere de parametros, y
       //De no tener el cb generaria un bucle infinito.
       onClick={() => {
         setEstado(estado + 1);
         console.log(estado);
       }}
-      className="bg-gray-700 w-fit p-5 rounded-2xl m-0.5"
+      className="bg-gray-700 w-fit p-5 rounded-2xl m-0.5 text-left hover:cursor-pointer"
     >
       ola, esto es un useState
       <br />
@@ -24,6 +24,6 @@ export default function UseState() {
       (El cambio tmb se muestra por consola)
       <br />
       Si haces click en esta card, aumenta el estado
-    </div>
+    </button>
   );
 }

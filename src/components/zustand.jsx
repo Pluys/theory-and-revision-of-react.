@@ -8,7 +8,7 @@ export default function Zustand() {
     resetearNumero,
   } = useZustand();
   //useZustand contiene el objeto creado,
-  //y se pueden obtener todos los datos del mismo destructurizando.
+  //y se pueden obtener todos (O parte de) los datos del mismo destructurizando.
 
   //El resto funciona igual que context.
   return (
@@ -22,22 +22,22 @@ export default function Zustand() {
       metodos de la tienda:
       <br />
       <button
-        onClick={() => incrementarNumero()}
-        className="mr-2 border-2 bg-blue-500 h-7 w-7"
-      >
-        +
-      </button>
-      <button
         onClick={() => decrementarNumero()}
-        className="mr-2 border-2 bg-blue-500 h-7 w-7"
+        className="mr-2 border-2 bg-blue-500 h-7 w-7 hover:cursor-pointer"
       >
         -
       </button>
       <button
         onClick={() => resetearNumero()}
-        className="mr-2 border-2 bg-blue-500 h-7 w-7"
+        className="mr-2 border-2 bg-blue-500 h-7 w-7 hover:cursor-pointer"
       >
         0
+      </button>
+      <button
+        onClick={() => incrementarNumero()}
+        className="mr-2 border-2 bg-blue-500 h-7 w-7 hover:cursor-pointer"
+      >
+        +
       </button>
     </div>
   );

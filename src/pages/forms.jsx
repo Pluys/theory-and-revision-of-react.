@@ -55,81 +55,82 @@ export default function Forms() {
   return (
     <>
       <NavBar />
+      <main>
+        <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
+          Zod & RHF
+        </h1>
 
-      <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
-        Zod & RHF
-      </h1>
-
-      <form
-        className="bg-violet-900 m-5 p-5 border-4 border-gray-300 flex flex-col"
-        //A pesar de que esta sintaxis normalmente cause una sobrecarga de re-renderizados,
-        //Esta es la manera de usar los forms con RHF.
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <div className="border-l-1 p-5 m-2">
-          <label htmlFor="Nombre">Nombre:</label>
-          <input
-            type="text"
-            id="Nombre"
-            {...register("Nombre")}
-            className="border-2 rounded-[10px] ml-2 p-0.5"
-          />
-          <br />
-          {/*
+        <form
+          className="bg-violet-900 m-5 p-5 border-4 border-gray-300 flex flex-col"
+          //A pesar de que esta sintaxis normalmente cause una sobrecarga de re-renderizados,
+          //Esta es la manera de usar los forms con RHF.
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <div className="border-l-1 p-5 m-2">
+            <label htmlFor="Nombre">Nombre:</label>
+            <input
+              type="text"
+              id="Nombre"
+              {...register("Nombre")}
+              className="border-2 rounded-[10px] ml-2 p-0.5"
+            />
+            <br />
+            {/*
           La sintaxis es bastante simple.
           Si errors contiene un error para el campo "Nombre", lo muestra.
           Es importante remarcar el optional chaining, ya que "errors" no tendrá el atributo "Nombre"
           A menos de que exista un error de validación en el campo.
           */}
-          {errors?.Nombre ? (
-            <span className="text-gray-400">
-              <em>* {errors.Nombre.message}</em>
-            </span>
-          ) : (
-            <br />
-          )}
-        </div>
+            {errors?.Nombre ? (
+              <span className="text-gray-400">
+                <em>* {errors.Nombre.message}</em>
+              </span>
+            ) : (
+              <br />
+            )}
+          </div>
 
-        <div className="border-l-1 p-5 m-2">
-          <label htmlFor="Apellido">Apellido:</label>
-          <input
-            type="text"
-            id="Apellido"
-            {...register("Apellido")}
-            className="border-2 rounded-[10px] ml-2 p-0.5"
-          />
-          <br />
-          {errors?.Apellido ? (
-            <span className="text-gray-400">
-              <em>* {errors.Apellido.message}</em>
-            </span>
-          ) : (
+          <div className="border-l-1 p-5 m-2">
+            <label htmlFor="Apellido">Apellido:</label>
+            <input
+              type="text"
+              id="Apellido"
+              {...register("Apellido")}
+              className="border-2 rounded-[10px] ml-2 p-0.5"
+            />
             <br />
-          )}
-        </div>
+            {errors?.Apellido ? (
+              <span className="text-gray-400">
+                <em>* {errors.Apellido.message}</em>
+              </span>
+            ) : (
+              <br />
+            )}
+          </div>
 
-        <div className="border-l-1 p-5 m-2">
-          <label htmlFor="Email">Email:</label>
-          <input
-            type="text"
-            id="Email"
-            {...register("Email")}
-            className="border-2 rounded-[10px] ml-2 p-0.5"
-          />
-          <br />
-          {errors?.Email ? (
-            <span className="text-gray-400">
-              <em>* {errors.Email.message}</em>
-            </span>
-          ) : (
+          <div className="border-l-1 p-5 m-2">
+            <label htmlFor="Email">Email:</label>
+            <input
+              type="text"
+              id="Email"
+              {...register("Email")}
+              className="border-2 rounded-[10px] ml-2 p-0.5"
+            />
             <br />
-          )}
-        </div>
+            {errors?.Email ? (
+              <span className="text-gray-400">
+                <em>* {errors.Email.message}</em>
+              </span>
+            ) : (
+              <br />
+            )}
+          </div>
 
-        <button className="border-2 rounded-2xl p-2 bg-violet-500 h-16 mt-5 active:scale-95 transition">
-          Enviar
-        </button>
-      </form>
+          <button className="border-2 rounded-2xl p-2 bg-violet-500 h-16 mt-5 active:scale-95 transition">
+            Enviar
+          </button>
+        </form>
+      </main>
     </>
   );
 }
