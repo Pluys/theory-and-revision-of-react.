@@ -18,11 +18,8 @@ export default function NavBar() {
         <Link to="/componentes" className="border-r-2 border-l-2 p-2 h-fit">
           Componentes
         </Link>
-        <Link
-          to="/forms"
-          className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px] mt-auto"
-        >
-          W.I.P.
+        <Link to="/forms" className="border-r-2 border-l-2 p-2 h-fit">
+          Forms
         </Link>
       </ul>
     </nav>

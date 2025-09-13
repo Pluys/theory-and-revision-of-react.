@@ -17,7 +17,8 @@ export default function Zustand() {
       <br />
       Y yo uso todo, asi que te permito ver la tienda y usarla
       <br />
-      Primero, tiene un numerito, que es {numero}, y podes cambiarlo con los
+      Primero, tiene un numerito, que es{" "}
+      <span className="text-rose-300">{numero}</span>, y podes cambiarlo con los
       metodos de la tienda:
       <br />
       <button

@@ -1,7 +1,7 @@
 export default function OtroHijo({ onChange, mostrar }) {
   return (
     <>
-      <div className="bg-gray-500 mb-2 mt-2">
+      <div className="bg-gray-500 mb-2 mt-2 border-1">
         Yo soy un hijo distinto, y hago exactamente lo mismo
         <br />
         <button

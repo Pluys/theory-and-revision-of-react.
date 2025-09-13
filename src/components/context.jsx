@@ -6,7 +6,7 @@ export default function Context() {
   const { boolean, handleBoolean } = useContext(MiContexto);
 
   return (
-    <div className="border-2 mt-5 mb-5 bg-gray-800 p-2">
+    <div className="border-2 mt-5 mb-5 bg-gray-900 p-2">
       Yo soy el consumidor del contexto, y el valor boolean que me dieron es:{" "}
       <p className={`${boolean ? "text-green-600" : "text-rose-500"}`}>
         {boolean.toString()}

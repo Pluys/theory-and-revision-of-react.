@@ -8,20 +8,22 @@ export default function ContextZustand() {
     <>
       <NavBar />
 
-      <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
-        Context
-      </h1>
-      <Context />
+      <main className="p-3">
+        <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
+          Context
+        </h1>
+        <Context />
 
-      <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
-        Zustand
-      </h1>
-      <Zustand />
+        <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
+          Zustand
+        </h1>
+        <Zustand />
 
-      <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
-        useEffect
-      </h1>
-      <UseEffect />
+        <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
+          useEffect
+        </h1>
+        <UseEffect />
+      </main>
     </>
   );
 }
