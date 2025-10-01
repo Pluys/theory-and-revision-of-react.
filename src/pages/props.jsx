@@ -1,6 +1,7 @@
 import ComponentePadreComun from "../components/ElevacionEstado/ComponentePadreComun";
 import NavBar from "../components/nav-bar";
 import Abuelo from "../components/PropDrilling/abuelo";
+import SubTtitle from "../components/sub-title";
 
 export default function Props() {
   return (
@@ -8,14 +9,10 @@ export default function Props() {
       <NavBar />
 
       <main className="p-3">
-        <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
-          Prop Drilling
-        </h1>
+        <SubTtitle content={"Prop Drilling"} />
         <Abuelo />
 
-        <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
-          Elevacion del estado
-        </h1>
+        <SubTtitle content={"Elevación del estado"} />
         <ComponentePadreComun />
       </main>
     </>

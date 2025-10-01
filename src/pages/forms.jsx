@@ -5,6 +5,7 @@ import NavBar from "../components/nav-bar";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import SubTtitle from "../components/sub-title";
 
 //Las validaciones se leen a través de objetos, y zod proporciona su creación con la funcion ".object"
 const userValidation = z.object({
@@ -56,9 +57,7 @@ export default function Forms() {
     <>
       <NavBar />
       <main>
-        <h1 className="w-fit border-2 border-rose-500 bg-rose-900 m-2 p-1 rounded-[5px]">
-          Zod & RHF
-        </h1>
+        <SubTtitle content={"Zod & R.H.F."} />
 
         <form
           className="bg-violet-900 m-5 p-5 border-4 border-gray-300 flex flex-col"

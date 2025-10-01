@@ -12,7 +12,9 @@ const handler = (set) => ({
   //Las funciones devuelven un objeto, que va a tener lo que se cambia del "contexto",
   //siendo en este caso, "numerito".
   incrementarNumero: () => set((state) => ({ numerito: state.numerito + 1 })),
-  decrementarNumero: () => set((state) => ({ numerito: state.numerito - 1 })),
+
+  //El state es desestructurizable, también.
+  decrementarNumero: () => set(({ numerito }) => ({ numerito: numerito - 1 })),
 
   //Como no usamos datos previos del state, simplemente no se pasa como parametro.
   resetearNumero: () => set(() => ({ numerito: 0 })),

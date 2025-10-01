@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/*
+  Indicates that every file that imports "index.css" will have access to all of tailwind's properties.
+*/
+
 body {
   background-color: black;
   color: #e0e0e0;

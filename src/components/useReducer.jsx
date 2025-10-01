@@ -26,7 +26,7 @@ function reducer(state, action) {
         number: state.number + 1,
       };
 
-    //acción de ejemplo, no implementada, pero librea que lo esté.
+    //acción de ejemplo no implementada, pero libre a la implementación experimental.
     case "DECREMENT_NUMBER":
       return {
         ...state,

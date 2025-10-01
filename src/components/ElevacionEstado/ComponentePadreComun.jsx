@@ -23,8 +23,9 @@ export default function ComponentePadreComun() {
         key={2}
       />
       <OtroHijo mostrar={mostrar === 3} handleMostrar={() => setMostrar(3)} />
+      {mostrar == 0 && <br />}
       <button
-        onClick={() => setMostrar()}
+        onClick={() => setMostrar(0)}
         className="border-4 p-2 bg-stone-500 hover:scale-105 transition active:scale-100 hover:cursor-pointer"
       >
         Resetear contenido
